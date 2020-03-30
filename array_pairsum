@@ -1,0 +1,32 @@
+// find pairsum of array 
+
+#include <iostream>
+using namespace std;
+
+void pairSum(int input[], int size, int x) {
+    int m=size;
+    for(int i=0;i<m;i++) {
+        for(int j=i+1;j<m;j++){
+            if(input[i]+input[j]==x) {         // sum of 2 elements same as pairsum(x) 
+                if(input[i]<input[j])           // arrage in ascending order
+                    cout<<input[i]<<" "<<input[j]<<endl;
+                 else
+                   cout<<input[j]<<" "<<input[i]<<endl;      
+            }
+        }
+    }
+}
+
+int main() {
+	int size;
+	int x;
+	cin>>size;
+	int input=[size];	
+	
+	for(int i=0;i<size;i++)
+		cin>>input[i];
+	cin>>x;                          // what sum pair we want for e.g 10 
+	pairSum(input,size,x);          // return all pairsum array elements whose sum is equal to x  for e.g 10
+		
+	return 0;
+}
