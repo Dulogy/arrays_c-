@@ -1,0 +1,33 @@
+// implement array rotation in c++
+
+#include<iostream>
+using namespace std;
+int main(){
+     int size , i , j;
+    cout << "enter size of array :-> ";
+    cin >> size ;
+    int array[size] ; 
+    for( i = 0; i < size ;i++){
+        cin >> array[i] ;
+    }
+    for( i = 0; i < size ;i++){
+        cout <<" before rotation :" << array[i] ;
+    }
+    cout << "enter no. of position to rotate in the array: ";
+    cin >> j;
+    int ar[j];
+    for(i =0 ;i < j;i++){
+        ar[i] = array[i] ;
+    }
+    for( i = 0; i < size-j;i++){
+        array[i] = array[i+j];
+    }
+    int k = 0;
+    for(i = size-j; i < size; i++){
+        array[i] = ar[k];
+        k++;
+    }
+    for( i = 0; i < size ;i++){
+        cout <<" after rotation :" << array[i] ;
+    }
+}
