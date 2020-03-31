@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+bool palindrome(char str[]) {
+    bool palindrome = true ;
+    int i = 0, count = -1 ;
+    while(str[i] != '\0'){
+        count++;
+        i++ ;
+    }
+    int j = 0;
+    while(j <= count){
+        if(str[j] != str[count]){
+            palindrome = false ;
+            break;
+        }
+        j++ ;
+        count-- ;
+    }
+    if(palindrome)
+    return true ;
+    else
+    return false ;
+
+}
+int main(){
+  char str[100] ; 
+  cout << "enter string to check palindrome:";
+  cin >> str ;
+   if(palindrome(str))
+   cout << "palindrome " ;
+   else
+   cout << " not palindrome " ;
+}
