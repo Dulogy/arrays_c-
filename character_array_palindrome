@@ -25,7 +25,7 @@ bool palindrome(char str[]) {
 int main(){
   char str[100] ; 
   cout << "enter string to check palindrome:";
-  cin >> str ;     // we can use cin.getline(str,length)  instead of cin  if we have multiple word input, but now its okay
+  cin >> str ;     // we must use cin.getline(str,length)  instead of cin  if we have multiple word input, but now its okay
    if(palindrome(str))
    cout << "palindrome " ;
    else
